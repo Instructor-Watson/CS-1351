@@ -1,0 +1,29 @@
+{
+  "name": "java-programming-assignment-checker",
+  "version": "1.0.0",
+  "description": "A private, browser-only Java assignment checker for static hosting",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:analyze": "vite build --mode analyze",
+    "preview": "vite preview",
+    "preview:https": "vite preview --https",
+    "test": "vitest --run src/core/JavaAutograderEngine.test.js src/core/JavaSolutions.test.js src/core/AssignmentLoader.test.js src/core/TestSuiteLoader.test.js src/core/StarterTemplateLoader.test.js src/core/SessionManager.test.js src/core/PrivacyCompliance.test.js src/components/AssignmentSelector.test.js src/components/AssignmentViewer.test.js src/components/ResultsPanel.test.js",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "fast-check": "^3.15.0",
+    "jsdom": "^28.1.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "java-parser": "^3.0.1",
+    "monaco-editor": "^0.45.0"
+  },
+  "overrides": {
+    "lodash": "^4.18.1",
+    "lodash-es": "^4.18.1"
+  }
+}

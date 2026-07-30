@@ -1,0 +1,23 @@
+{
+  "mainClass": "",
+  "requireNoTodo": true,
+  "tests": [
+    {
+      "id": "sections",
+      "title": "Every proposal section is present",
+      "type": "source",
+      "includeComments": true,
+      "patterns": [
+        "Project title",
+        "Purpose and intended user",
+        "Part 1 workflow",
+        "Foundational Java feature map",
+        "Three example interactions",
+        "Part 2 improvements",
+        "Expected files",
+        "Timeline",
+        "Risks and fallback plans"
+      ]
+    }
+  ]
+}

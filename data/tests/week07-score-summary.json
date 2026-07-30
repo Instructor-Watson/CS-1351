@@ -1,0 +1,40 @@
+{
+  "mainClass": "ScoreSummary",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "array-loop",
+      "title": "The scores array is traversed",
+      "type": "source",
+      "patterns": [
+        "int\\s*\\[\\s*\\]\\s+scores",
+        "\\bfor\\s*\\("
+      ]
+    },
+    {
+      "id": "calculations",
+      "title": "Total, average, and highest are calculated",
+      "type": "source",
+      "patterns": [
+        "total\\s*\\+=",
+        "highest\\s*=",
+        "/\\s*scores\\.length"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "433",
+        "86.6",
+        "92"
+      ]
+    }
+  ]
+}

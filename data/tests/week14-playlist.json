@@ -1,0 +1,50 @@
+{
+  "mainClass": "PlaylistDemo",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "list",
+      "title": "Playlist owns an ArrayList of Strings",
+      "type": "source",
+      "patterns": [
+        "ArrayList\\s*<\\s*String\\s*>",
+        "new\\s+ArrayList"
+      ]
+    },
+    {
+      "id": "regex",
+      "title": "A regular expression validates titles",
+      "type": "source",
+      "patterns": [
+        "Pattern\\.compile\\s*\\(",
+        "\\.matcher\\s*\\(",
+        "\\.matches\\s*\\("
+      ]
+    },
+    {
+      "id": "exception",
+      "title": "Invalid titles are thrown and caught",
+      "type": "source",
+      "patterns": [
+        "throw\\s+new\\s+IllegalArgumentException",
+        "catch\\s*\\("
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Here Comes the Sun",
+        "Happy",
+        "Imagine",
+        "Validation:"
+      ]
+    }
+  ]
+}

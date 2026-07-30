@@ -1,0 +1,156 @@
+{
+  "id": "java-programming",
+  "title": "Java Programming",
+  "description": "A gentle 15-week introduction to Java using Think Java 2e Chapters 1-13, OpenJDK 26, IntelliJ IDEA, and a staged personal project.",
+  "defaultGradingPolicy": {
+    "type": "equal_weight_tests",
+    "version": "1",
+    "description": "Each published assignment requirement contributes equally; separately submitted work is reviewed by the instructor."
+  },
+  "assignments": [
+    {
+      "id": "week-01-hello-world",
+      "title": "Week 1 - Hello, World!",
+      "description": "Create, run, and submit the same small Hello World program introduced in Think Java Chapter 1.",
+      "instructions": "week01_hello_world.pdf",
+      "starterCode": "HelloWorld.java",
+      "testSuiteFile": "tests/week01-hello-world.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-02-my-profile",
+      "title": "Week 2 - My Profile",
+      "description": "Store a few facts in variables, perform one calculation, and print the results.",
+      "instructions": "week02_my_profile.pdf",
+      "starterCode": "MyProfile.java",
+      "testSuiteFile": "tests/week02-my-profile.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-03-temperature-converter",
+      "title": "Week 3 - Temperature Converter",
+      "description": "Ask the user for a Celsius temperature and display the Fahrenheit equivalent.",
+      "instructions": "week03_temperature_converter.pdf",
+      "starterCode": "TemperatureConverter.java",
+      "testSuiteFile": "tests/week03-temperature-converter.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-04-method-messages",
+      "title": "Week 4 - Message Methods",
+      "description": "Complete three small methods and call them from main in the requested order.",
+      "instructions": "week04_method_messages.pdf",
+      "starterCode": "MethodMessages.java",
+      "testSuiteFile": "tests/week04-method-messages.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-05-age-group",
+      "title": "Week 5 - Age Group",
+      "description": "Use one if/else-if/else chain to classify an age as child, teen, or adult.",
+      "instructions": "week05_age_group.pdf",
+      "starterCode": "AgeGroup.java",
+      "testSuiteFile": "tests/week05-age-group.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-06-vowel-counter",
+      "title": "Week 6 - Vowel Counter",
+      "description": "Loop through one word and count its vowels.",
+      "instructions": "week06_vowel_counter.pdf",
+      "starterCode": "VowelCounter.java",
+      "testSuiteFile": "tests/week06-vowel-counter.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-07-score-summary",
+      "title": "Week 7 - Score Summary",
+      "description": "Traverse a provided array and print its total, average, and highest score.",
+      "instructions": "week07_score_summary.pdf",
+      "starterCode": "ScoreSummary.java",
+      "testSuiteFile": "tests/week07-score-summary.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-07-project-proposal",
+      "title": "Week 7 - Personal Project Proposal",
+      "description": "Plan a small Java program that you can finish in stages during the course.",
+      "instructions": "week07_project_proposal.pdf",
+      "starterCode": "ProjectProposal.md",
+      "testSuiteFile": "tests/week07-project-proposal.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-08-recursive-countdown",
+      "title": "Week 8 - Recursive Countdown",
+      "description": "Complete a carefully scaffolded recursive countdown with one base case and one recursive call.",
+      "instructions": "week08_recursive_countdown.pdf",
+      "starterCode": "RecursiveCountdown.java",
+      "testSuiteFile": "tests/week08-recursive-countdown.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-09-string-explorer",
+      "title": "Week 9 - String Explorer",
+      "description": "Create transformed String values and demonstrate that the original String does not change.",
+      "instructions": "week09_string_explorer.pdf",
+      "starterCode": "StringExplorer.java",
+      "testSuiteFile": "tests/week09-string-explorer.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-10-personal-project-part-1",
+      "title": "Week 10 - Personal Project Part 1",
+      "description": "Build the simple, functional Java prototype described in your approved proposal. No other assignment is due this week.",
+      "instructions": "week10_personal_project_part_1.pdf",
+      "starterCode": "PersonalProjectPart1.java",
+      "testSuiteFile": "tests/week10-personal-project-part-1.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-11-message-builder",
+      "title": "Week 11 - Validated Message Builder",
+      "description": "Practice mutable strings and a validation loop that can be reused in Personal Project Part 2.",
+      "instructions": "week11_message_builder.pdf",
+      "starterCode": "MessageBuilder.java",
+      "testSuiteFile": "tests/week11-message-builder.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-12-book-class",
+      "title": "Week 12 - Safe Book Class",
+      "description": "Design a small class that validates constructor data and demonstrates Java exception handling.",
+      "instructions": "week12_book_class.pdf",
+      "starterCode": "BookDemo.java",
+      "testSuiteFile": "tests/week12-book-class.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-13-classroom-roster",
+      "title": "Week 13 - Roster File",
+      "description": "Store Student objects in an array, save their names to a text file, and load the file again.",
+      "instructions": "week13_classroom_roster.pdf",
+      "starterCode": "ClassroomRoster.java",
+      "testSuiteFile": "tests/week13-classroom-roster.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-14-playlist",
+      "title": "Week 14 - Validated Playlist",
+      "description": "Build an object that owns a list and uses a regular expression to reject invalid titles.",
+      "instructions": "week14_playlist.pdf",
+      "starterCode": "PlaylistDemo.java",
+      "testSuiteFile": "tests/week14-playlist.json",
+      "grader": "java_spec"
+    },
+    {
+      "id": "week-15-personal-project-part-2",
+      "title": "Week 15 - Personal Project Part 2",
+      "description": "Expand Part 1 into a polished Java project using the advanced skills practiced in Weeks 11-14.",
+      "instructions": "week15_personal_project_part_2.pdf",
+      "starterCode": "PersonalProjectPart2.java",
+      "testSuiteFile": "tests/week15-personal-project-part-2.json",
+      "grader": "java_spec"
+    }
+  ]
+}

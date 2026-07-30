@@ -1,0 +1,39 @@
+{
+  "mainClass": "MessageBuilder",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "validation",
+      "title": "A loop rejects blank input",
+      "type": "source",
+      "patterns": [
+        "while\\s*\\(",
+        "\\.trim\\s*\\(",
+        "\\.isEmpty\\s*\\("
+      ]
+    },
+    {
+      "id": "builder",
+      "title": "A StringBuilder modifies the message",
+      "type": "source",
+      "patterns": [
+        "new\\s+StringBuilder",
+        "\\.append\\s*\\("
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "\njava is fun\n",
+      "outputContains": [
+        "Message:",
+        "Java is fun!"
+      ]
+    }
+  ]
+}

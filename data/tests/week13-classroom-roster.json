@@ -1,0 +1,40 @@
+{
+  "mainClass": "ClassroomRoster",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "array",
+      "title": "Student objects are stored in an array",
+      "type": "source",
+      "patterns": [
+        "Student\\s*\\[\\s*\\]",
+        "new\\s+Student"
+      ]
+    },
+    {
+      "id": "files",
+      "title": "The roster is written and loaded",
+      "type": "source",
+      "patterns": [
+        "Files\\.write\\s*\\(",
+        "Files\\.readAllLines\\s*\\(",
+        "catch\\s*\\(\\s*IOException"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Ada",
+        "Grace",
+        "James"
+      ]
+    }
+  ]
+}

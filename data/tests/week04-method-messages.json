@@ -1,0 +1,41 @@
+{
+  "mainClass": "MethodMessages",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "methods",
+      "title": "Three message methods are defined",
+      "type": "source",
+      "patterns": [
+        "void\\s+printWelcome",
+        "void\\s+printCourse",
+        "void\\s+printGoodbye"
+      ]
+    },
+    {
+      "id": "calls",
+      "title": "main calls all three methods",
+      "type": "source",
+      "patterns": [
+        "printWelcome\\s*\\(\\s*\\)",
+        "printCourse\\s*\\(\\s*\\)",
+        "printGoodbye\\s*\\(\\s*\\)"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Welcome to Java!",
+        "CS 1351",
+        "Keep practicing!"
+      ]
+    }
+  ]
+}

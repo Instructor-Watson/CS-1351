@@ -1,0 +1,40 @@
+{
+  "mainClass": "StringExplorer",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "methods",
+      "title": "The requested String methods are used",
+      "type": "source",
+      "patterns": [
+        "\\.toUpperCase\\s*\\(",
+        "\\.replace\\s*\\("
+      ]
+    },
+    {
+      "id": "values",
+      "title": "Original and transformed Strings are stored separately",
+      "type": "source",
+      "patterns": [
+        "String\\s+original",
+        "String\\s+uppercase",
+        "String\\s+replaced"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Java is fun",
+        "JAVA IS FUN",
+        "Java is powerful"
+      ]
+    }
+  ]
+}

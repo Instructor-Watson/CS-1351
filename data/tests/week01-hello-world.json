@@ -1,0 +1,36 @@
+{
+  "mainClass": "HelloWorld",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "class",
+      "title": "HelloWorld class and main method are present",
+      "type": "source",
+      "patterns": [
+        "class\\s+HelloWorld",
+        "static\\s+void\\s+main"
+      ]
+    },
+    {
+      "id": "message",
+      "title": "The exact greeting is printed",
+      "type": "source",
+      "patterns": [
+        "System\\.out\\.println\\s*\\(\\s*\"Hello, World!\"\\s*\\)"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Hello, World!"
+      ]
+    }
+  ]
+}

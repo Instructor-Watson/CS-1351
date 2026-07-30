@@ -1,0 +1,40 @@
+{
+  "mainClass": "BookDemo",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "fields",
+      "title": "Book has private title and pages fields",
+      "type": "source",
+      "patterns": [
+        "private\\s+String\\s+title",
+        "private\\s+int\\s+pages"
+      ]
+    },
+    {
+      "id": "exception",
+      "title": "Invalid data is thrown and caught",
+      "type": "source",
+      "patterns": [
+        "throw\\s+new\\s+IllegalArgumentException",
+        "try\\s*\\{",
+        "catch\\s*\\("
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "Charlotte's Web",
+        "192",
+        "Validation:"
+      ]
+    }
+  ]
+}

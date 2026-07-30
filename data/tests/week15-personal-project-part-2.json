@@ -1,0 +1,48 @@
+{
+  "mainClass": "PersonalProjectPart2",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "strings-validation",
+      "title": "String processing and loop-based validation are used",
+      "type": "source",
+      "patterns": [
+        "\\.(trim|replace|substring|toUpperCase|toLowerCase)\\s*\\(",
+        "\\b(while|for)\\s*\\("
+      ]
+    },
+    {
+      "id": "exceptions",
+      "title": "Exceptions are caught and explicitly thrown",
+      "type": "source",
+      "patterns": [
+        "try\\s*\\{",
+        "catch\\s*\\(",
+        "throw\\s+new\\s+"
+      ]
+    },
+    {
+      "id": "regex",
+      "title": "A regular expression is used",
+      "type": "source",
+      "mode": "any",
+      "patterns": [
+        "Pattern\\.compile\\s*\\(",
+        "\\.matches\\s*\\("
+      ]
+    },
+    {
+      "id": "files",
+      "title": "Project data is loaded and saved",
+      "type": "source",
+      "patterns": [
+        "Files\\.(readAllLines|readString)\\s*\\(",
+        "Files\\.(write|writeString)\\s*\\("
+      ]
+    }
+  ]
+}

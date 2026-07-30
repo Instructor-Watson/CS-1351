@@ -1,0 +1,39 @@
+{
+  "mainClass": "MyProfile",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "types",
+      "title": "String, int, and double variables are used",
+      "type": "source",
+      "patterns": [
+        "String\\s+name",
+        "int\\s+favoriteNumber",
+        "double\\s+favoritePrice"
+      ]
+    },
+    {
+      "id": "math",
+      "title": "The favorite number is multiplied by 2",
+      "type": "source",
+      "patterns": [
+        "favoriteNumber\\s*\\*\\s*2"
+      ]
+    },
+    {
+      "id": "labels",
+      "title": "The four requested labels are present",
+      "type": "source",
+      "patterns": [
+        "Name:",
+        "Favorite number:",
+        "Doubled number:",
+        "Favorite price:"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "mainClass": "AgeGroup",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "decision",
+      "title": "A complete if/else-if/else decision is used",
+      "type": "source",
+      "patterns": [
+        "if\\s*\\(",
+        "else\\s+if\\s*\\(",
+        "else\\b"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "12\n",
+      "outputContains": [
+        "Child"
+      ]
+    },
+    {
+      "id": "example-2",
+      "title": "Required example 2 produces the expected result",
+      "type": "run",
+      "input": "13\n",
+      "outputContains": [
+        "Teen"
+      ]
+    },
+    {
+      "id": "example-3",
+      "title": "Required example 3 produces the expected result",
+      "type": "run",
+      "input": "19\n",
+      "outputContains": [
+        "Teen"
+      ]
+    },
+    {
+      "id": "example-4",
+      "title": "Required example 4 produces the expected result",
+      "type": "run",
+      "input": "20\n",
+      "outputContains": [
+        "Adult"
+      ]
+    }
+  ]
+}

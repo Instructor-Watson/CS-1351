@@ -1,0 +1,39 @@
+{
+  "mainClass": "RecursiveCountdown",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "base",
+      "title": "The recursion has a zero base case",
+      "type": "source",
+      "patterns": [
+        "number\\s*==\\s*0",
+        "return\\s*;"
+      ]
+    },
+    {
+      "id": "recursive-call",
+      "title": "The method calls itself with number minus one",
+      "type": "source",
+      "patterns": [
+        "countDown\\s*\\(\\s*number\\s*-\\s*1\\s*\\)"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "",
+      "outputContains": [
+        "3",
+        "2",
+        "1",
+        "Blast off!"
+      ]
+    }
+  ]
+}

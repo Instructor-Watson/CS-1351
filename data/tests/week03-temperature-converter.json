@@ -1,0 +1,45 @@
+{
+  "mainClass": "TemperatureConverter",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "input",
+      "title": "Scanner reads a decimal number",
+      "type": "source",
+      "patterns": [
+        "new\\s+Scanner",
+        "nextDouble\\s*\\("
+      ]
+    },
+    {
+      "id": "formula",
+      "title": "The Celsius-to-Fahrenheit formula is used",
+      "type": "source",
+      "patterns": [
+        "celsius\\s*\\*\\s*9\\.0?\\s*/\\s*5\\.0?\\s*\\+\\s*32"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "0\n",
+      "outputContains": [
+        "32"
+      ]
+    },
+    {
+      "id": "example-2",
+      "title": "Required example 2 produces the expected result",
+      "type": "run",
+      "input": "100\n",
+      "outputContains": [
+        "212"
+      ]
+    }
+  ]
+}

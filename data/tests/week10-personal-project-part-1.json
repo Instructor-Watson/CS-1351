@@ -1,0 +1,49 @@
+{
+  "mainClass": "PersonalProjectPart1",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "input-output",
+      "title": "Console input and output are used",
+      "type": "source",
+      "patterns": [
+        "Scanner\\s+\\w+",
+        "System\\.out\\.print"
+      ]
+    },
+    {
+      "id": "flow",
+      "title": "Decisions, logical and relational operators, and a loop are present",
+      "type": "source",
+      "patterns": [
+        "\\bif\\s*\\(",
+        "else\\s+if",
+        "else\\b",
+        "(&&|\\|\\|)",
+        "(<=|>=|<|>)",
+        "\\b(while|for)\\s*\\("
+      ]
+    },
+    {
+      "id": "methods",
+      "title": "At least two methods besides main are defined",
+      "type": "source_count",
+      "pattern": "static\\s+[\\w<>\\[\\]]+\\s+\\w+\\s*\\(",
+      "minimum": 3
+    },
+    {
+      "id": "collection",
+      "title": "An array or ArrayList is used",
+      "type": "source",
+      "mode": "any",
+      "patterns": [
+        "\\w+\\s*\\[\\s*\\]",
+        "ArrayList\\s*<"
+      ]
+    }
+  ]
+}

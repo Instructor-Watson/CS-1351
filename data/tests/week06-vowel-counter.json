@@ -1,0 +1,50 @@
+{
+  "mainClass": "VowelCounter",
+  "tests": [
+    {
+      "id": "compile",
+      "title": "Java syntax and class structure are valid",
+      "type": "compile"
+    },
+    {
+      "id": "loop",
+      "title": "A for loop traverses the word",
+      "type": "source",
+      "patterns": [
+        "for\\s*\\(",
+        "\\.length\\s*\\(\\s*\\)",
+        "\\.charAt\\s*\\("
+      ]
+    },
+    {
+      "id": "vowels",
+      "title": "All five vowels are considered",
+      "type": "source",
+      "patterns": [
+        "'a'",
+        "'e'",
+        "'i'",
+        "'o'",
+        "'u'"
+      ]
+    },
+    {
+      "id": "example-1",
+      "title": "Required example 1 produces the expected result",
+      "type": "run",
+      "input": "education\n",
+      "outputContains": [
+        "Vowels: 5"
+      ]
+    },
+    {
+      "id": "example-2",
+      "title": "Required example 2 produces the expected result",
+      "type": "run",
+      "input": "rhythm\n",
+      "outputContains": [
+        "Vowels: 0"
+      ]
+    }
+  ]
+}
