@@ -7,22 +7,49 @@
       "type": "compile"
     },
     {
-      "id": "array",
-      "title": "Student objects are stored in an array",
+      "id": "immutable-student",
+      "title": "Student stores immutable ID and name data",
       "type": "source",
       "patterns": [
-        "Student\\s*\\[\\s*\\]",
-        "new\\s+Student"
+        "private\\s+final\\s+int\\s+id",
+        "private\\s+final\\s+String\\s+name",
+        "this\\.id\\s*=\\s*id",
+        "this\\.name\\s*=\\s*name"
       ]
     },
     {
-      "id": "files",
-      "title": "The roster is written and loaded",
+      "id": "object-methods",
+      "title": "Student provides getters, toString, and value equality",
       "type": "source",
       "patterns": [
-        "Files\\.write\\s*\\(",
-        "Files\\.readAllLines\\s*\\(",
-        "catch\\s*\\(\\s*IOException"
+        "int\\s+getId\\s*\\(",
+        "String\\s+getName\\s*\\(",
+        "String\\s+toString\\s*\\(",
+        "boolean\\s+equals\\s*\\(\\s*Student",
+        "this\\.name\\.equals\\s*\\("
+      ]
+    },
+    {
+      "id": "object-array",
+      "title": "Ada, Grace, and James are stored in a Student array",
+      "type": "source",
+      "patterns": [
+        "Student\\s*\\[\\s*\\]\\s*students",
+        "new\\s+Student\\s*\\(\\s*101\\s*,\\s*\\\"Ada\\\"",
+        "new\\s+Student\\s*\\(\\s*102\\s*,\\s*\\\"Grace\\\"",
+        "new\\s+Student\\s*\\(\\s*103\\s*,\\s*\\\"James\\\""
+      ]
+    },
+    {
+      "id": "traversal-search",
+      "title": "The roster is traversed and searched sequentially",
+      "type": "source",
+      "patterns": [
+        "void\\s+printRoster\\s*\\(",
+        "for\\s*\\(\\s*Student\\s+\\w+\\s*:\\s*students\\s*\\)",
+        "int\\s+findStudent\\s*\\(",
+        "\\.equals\\s*\\(\\s*target\\s*\\)",
+        "return\\s+-1\\s*;"
       ]
     },
     {
@@ -31,10 +58,21 @@
       "type": "run",
       "input": "",
       "outputContains": [
-        "Ada",
-        "Grace",
-        "James"
-      ]
+        "101 - Ada",
+        "102 - Grace",
+        "103 - James",
+        "Grace index: 1",
+        "Linus index: -1",
+        "Loaded from students.txt:"
+      ],
+      "createdFile": {
+        "path": "students.txt",
+        "contains": [
+          "101 - Ada",
+          "102 - Grace",
+          "103 - James"
+        ]
+      }
     }
   ]
 }

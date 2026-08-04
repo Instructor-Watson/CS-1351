@@ -2,6 +2,7 @@
   "id": "java-programming",
   "title": "Java Programming",
   "description": "A gentle 15-week introduction to Java using Think Java 2e Chapters 1-13, OpenJDK 26, IntelliJ IDEA, and a staged personal project.",
+  "courseUrl": "https://instructor-watson.github.io/CS-1351/",
   "defaultGradingPolicy": {
     "type": "equal_weight_tests",
     "version": "1",
@@ -127,8 +128,8 @@
     },
     {
       "id": "week-13-classroom-roster",
-      "title": "Week 13 - Roster File",
-      "description": "Store Student objects in an array, save their names to a text file, and load the file again.",
+      "title": "Week 13 - Searchable Student Roster",
+      "description": "Build an immutable Student class, store Student objects in an array, traverse the roster, and search it sequentially.",
       "instructions": "week13_classroom_roster.pdf",
       "starterCode": "ClassroomRoster.java",
       "testSuiteFile": "tests/week13-classroom-roster.json",
