@@ -7,22 +7,34 @@
       "type": "compile"
     },
     {
-      "id": "fields",
-      "title": "Book has private title and pages fields",
+      "id": "fields-constructor",
+      "title": "Book has private fields initialized by its constructor",
       "type": "source",
       "patterns": [
         "private\\s+String\\s+title",
-        "private\\s+int\\s+pages"
+        "private\\s+int\\s+pages",
+        "this\\.title\\s*=\\s*title",
+        "this\\.pages\\s*=\\s*pages"
       ]
     },
     {
-      "id": "exception",
-      "title": "Invalid data is thrown and caught",
+      "id": "object-methods",
+      "title": "Book provides getters and a description method",
       "type": "source",
       "patterns": [
-        "throw\\s+new\\s+IllegalArgumentException",
-        "try\\s*\\{",
-        "catch\\s*\\("
+        "String\\s+getTitle\\s*\\(",
+        "int\\s+getPages\\s*\\(",
+        "String\\s+describe\\s*\\("
+      ]
+    },
+    {
+      "id": "objects-comparison",
+      "title": "Two books are created and compared by page count",
+      "type": "source",
+      "patterns": [
+        "new\\s+Book\\s*\\(\\s*\\\"Charlotte's Web\\\"\\s*,\\s*192\\s*\\)",
+        "new\\s+Book\\s*\\(\\s*\\\"The Hobbit\\\"\\s*,\\s*310\\s*\\)",
+        "getPages\\s*\\(\\s*\\)\\s*>"
       ]
     },
     {
@@ -31,9 +43,9 @@
       "type": "run",
       "input": "",
       "outputContains": [
-        "Charlotte's Web",
-        "192",
-        "Validation:"
+        "Charlotte's Web - 192 pages",
+        "The Hobbit - 310 pages",
+        "Longer book: The Hobbit"
       ]
     }
   ]

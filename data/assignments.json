@@ -119,8 +119,8 @@
     },
     {
       "id": "week-12-book-class",
-      "title": "Week 12 - Safe Book Class",
-      "description": "Design a small class that validates constructor data and demonstrates Java exception handling.",
+      "title": "Week 12 - Book Class",
+      "description": "Design a small class with private fields, a constructor, getters, and a useful description method.",
       "instructions": "week12_book_class.pdf",
       "starterCode": "BookDemo.java",
       "testSuiteFile": "tests/week12-book-class.json",
@@ -137,8 +137,8 @@
     },
     {
       "id": "week-14-playlist",
-      "title": "Week 14 - Validated Playlist",
-      "description": "Build an object that owns a list and uses a regular expression to reject invalid titles.",
+      "title": "Week 14 - Organized Playlist",
+      "description": "Build an object that owns a dynamic song collection, provides wrapper methods, and organizes the collection with selection sort.",
       "instructions": "week14_playlist.pdf",
       "starterCode": "PlaylistDemo.java",
       "testSuiteFile": "tests/week14-playlist.json",

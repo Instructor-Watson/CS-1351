@@ -1,0 +1,15 @@
+# Project Part 1 Rubric — 100 points
+
+| Criterion | Weight | Exemplary (100%) | Proficient (50%) | Needs Improvement (0%) |
+|---|---:|---|---|---|
+| Functional Prototype | 20% | The program runs smoothly from start to finish, with a clear main workflow that performs its intended task without failures. | The program mostly runs correctly; most steps execute as intended, but a few minor issues could affect some parts of the workflow. | The program fails to run or cannot complete its main purpose due to significant issues or missing essential parts. |
+| Readability and Style | 10% | Code is well-organized with consistent indentation, clear variable names, and a readable structure that makes it easy to understand. | Code is somewhat readable but has occasional unclear names, minor formatting inconsistencies, or slight spacing issues. | Code is hard to read due to poor naming, inconsistent formatting, and confusing structure. |
+| Meaningful Comments | 10% | Comments explain non-obvious intent and major design choices, helping someone else understand why code does what it does. | Some areas have comments, but important sections lack explanation or could be clearer. | Little to no meaningful comments, making it hard to grasp purpose or design decisions. |
+| Flow Control Logic | 5% | Decision logic uses if/else-if/else appropriately and clearly guides the program flow. | Decision structure is present but may be incomplete or harder to follow in some branches. | No meaningful decision structure or misused conditional logic disrupts flow. |
+| Logical Operators | 5% | Uses `&&` or `||` meaningfully. | Present but incorrect or unnecessary. | Not used. |
+| Relational Operators | 5% | Uses a comparison meaningfully. | Present but incorrect. | Not used. |
+| Loop Structure | 5% | At least one useful `while` or `for` loop is present, correctly controlling repetition. | A loop exists but may be incomplete, empty, or not adequately integrated with the task. | No functional loop, or loops fail to contribute to the program's goals. |
+| Methods and Modularity | 5% | Two or more methods besides `main` are defined and called in a meaningful, modular way. | Only one helper method is fully developed, or there is limited modularity. | No useful secondary methods exist, or they do not contribute to structure. |
+| Array Utilization | 5% | An array is used to store and manage data effectively, supporting the program's needs. | An array is present, but its use is unclear or not well integrated. | No array is used, or its absence prevents the program from functioning as intended. |
+| Presentation Content | 15% | Explains the design, demonstrates the complete workflow, and identifies required Java concepts. | One required content element is incomplete. | No meaningful design explanation or demonstration. |
+| Presentation Delivery | 15% | Follows a clear sequence, stays within 5–10 minutes, and is easy to understand. | Organization, timing, or clarity needs improvement. | The presentation is missing or cannot be followed. |

@@ -32,17 +32,15 @@
       "id": "methods",
       "title": "At least two methods besides main are defined",
       "type": "source_count",
-      "pattern": "static\\s+[\\w<>\\[\\]]+\\s+\\w+\\s*\\(",
+      "pattern": "(?m)^\\s*(?:(?:public|protected|private)\\s+)?(?:static\\s+)?(?!if\\b|for\\b|while\\b|switch\\b|catch\\b|else\\b)[\\w<>\\[\\]]+\\s+\\w+\\s*\\([^;{}]*\\)\\s*(?:throws\\s+[\\w.,\\s]+)?\\s*\\{",
       "minimum": 3
     },
     {
       "id": "collection",
-      "title": "An array or ArrayList is used",
+      "title": "An array is used",
       "type": "source",
-      "mode": "any",
       "patterns": [
-        "\\w+\\s*\\[\\s*\\]",
-        "ArrayList\\s*<"
+        "\\w+\\s*\\[\\s*\\]"
       ]
     }
   ]

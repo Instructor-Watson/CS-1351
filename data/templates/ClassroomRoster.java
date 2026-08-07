@@ -1,7 +1,3 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 class Student {
     private final int id;
     private final String name;
@@ -28,8 +24,6 @@ class Student {
 }
 
 public class ClassroomRoster {
-    private static final Path ROSTER_FILE = Path.of("students.txt");
-
     public static void printRoster(Student[] students) {
         // TODO: Use an enhanced for loop to print every Student.
     }
@@ -37,24 +31,6 @@ public class ClassroomRoster {
     public static int findStudent(Student[] students, Student target) {
         // TODO: Use sequential search and equals. Return the matching index.
         return -1;
-    }
-
-    // This completed method demonstrates file output and input.
-    // Read it, run it, and observe students.txt; no changes are required.
-    public static void saveAndLoadRoster(Student[] students) {
-        StringBuilder fileText = new StringBuilder();
-        for (Student student : students) {
-            fileText.append(student).append(System.lineSeparator());
-        }
-
-        try {
-            Files.writeString(ROSTER_FILE, fileText.toString());
-            String loadedText = Files.readString(ROSTER_FILE);
-            System.out.println("Loaded from students.txt:");
-            System.out.print(loadedText);
-        } catch (IOException error) {
-            System.out.println("Could not use roster file: " + error.getMessage());
-        }
     }
 
     public static void main(String[] args) {
@@ -69,7 +45,5 @@ public class ClassroomRoster {
         Student linus = new Student(999, "Linus");
         System.out.println("Grace index: " + findStudent(students, grace));
         System.out.println("Linus index: " + findStudent(students, linus));
-
-        saveAndLoadRoster(students);
     }
 }

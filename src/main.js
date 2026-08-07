@@ -22,11 +22,13 @@ import { SubmitButton } from './components/SubmitButton.js';
 import { ResultsPanel } from './components/ResultsPanel.js';
 import { FeedbackDisplay } from './components/FeedbackDisplay.js';
 
+const assignmentsCatalogUrl = new URL('../data/assignments.json', import.meta.url).href;
+
 class App {
   constructor() {
     this.autograderEngine = new AutograderEngine();
     this.feedbackGenerator = new FeedbackGenerator();
-    this.assignmentLoader = new AssignmentLoader('assignments.json');
+    this.assignmentLoader = new AssignmentLoader(assignmentsCatalogUrl);
     this.sessionManager = new SessionManager();
     this.starterTemplateLoader = new StarterTemplateLoader('templates');
 

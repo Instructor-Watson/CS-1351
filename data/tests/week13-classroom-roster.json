@@ -62,17 +62,8 @@
         "102 - Grace",
         "103 - James",
         "Grace index: 1",
-        "Linus index: -1",
-        "Loaded from students.txt:"
-      ],
-      "createdFile": {
-        "path": "students.txt",
-        "contains": [
-          "101 - Ada",
-          "102 - Grace",
-          "103 - James"
-        ]
-      }
+        "Linus index: -1"
+      ]
     }
   ]
 }

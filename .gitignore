@@ -27,4 +27,7 @@ output/
 
 *.md
 !data/templates/ProjectProposal.md
+!data/markdown_resources/
+!data/markdown_resources/*.md
+data/markdown_resources/manifest.json
 solutions/

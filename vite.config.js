@@ -1,4 +1,8 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const projectRoot = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   // Use relative paths for static hosting compatibility (GitHub Pages, Netlify, Vercel)
@@ -18,6 +22,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     
     rollupOptions: {
+      input: {
+        main: resolve(projectRoot, 'index.html'),
+        resource: resolve(projectRoot, 'resource.html')
+      },
       output: {
         // Manual chunking for better caching
         manualChunks: {

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Java course resource">
+  <title>Course Resource | Java Programming</title>
+  <link rel="icon" href="data:,">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('markdown-viewer-theme');
+        const theme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="src/styles/resource.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to resource content</a>
+  <header class="resource-header">
+    <a class="resource-brand" href="./" aria-label="Return to the Java Programming Assignment Check">
+      <span class="resource-brand-mark" aria-hidden="true">J</span>
+      <span>
+        <strong>Java Programming</strong>
+        <small>Course resource</small>
+      </span>
+    </a>
+    <nav class="resource-actions" aria-label="Markdown viewer controls">
+      <div class="resource-picker">
+        <label for="resource-select">Resource</label>
+        <div class="resource-select-shell">
+          <select id="resource-select" disabled>
+            <option>Loading resources...</option>
+          </select>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m7 10 5 5 5-5H7Z" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        title="Use dark appearance"
+      >
+        <span class="theme-toggle-track" aria-hidden="true">
+          <span class="theme-toggle-thumb">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" focusable="false">
+              <path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM5.64 4.22a1 1 0 0 1 .7.3l1.42 1.4a1 1 0 0 1-1.42 1.42L4.93 5.93a1 1 0 0 1 .7-1.71Zm12.02 12.44a1 1 0 0 1 .7.3l1.42 1.4a1 1 0 0 1-1.42 1.42l-1.41-1.41a1 1 0 0 1 .7-1.71ZM2 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm16 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM6.34 16.66a1 1 0 0 1 1.42 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.42l1.41-1.41Zm12.02-12.44a1 1 0 0 1 1.42 1.71l-1.41 1.41a1 1 0 1 1-1.42-1.41l1.41-1.41Z" fill="currentColor"/>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" focusable="false">
+              <path d="M20.4 15.55A9 9 0 0 1 8.45 3.6a9 9 0 1 0 11.95 11.95Z" fill="currentColor"/>
+            </svg>
+          </span>
+        </span>
+        <span>Dark mode</span>
+      </button>
+      <a id="download-resource" class="resource-button resource-button-primary" href="#" download hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z" fill="currentColor"/>
+        </svg>
+        Download Markdown
+      </a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="resource-main" tabindex="-1" aria-busy="true">
+    <div id="resource-status" class="resource-status" role="status" aria-live="polite">
+      <div class="resource-spinner" aria-hidden="true"></div>
+      <p>Loading course resource...</p>
+    </div>
+    <article id="resource-content" class="markdown-body" hidden></article>
+    <noscript>
+      <div class="resource-status resource-error">
+        <h1>JavaScript is required</h1>
+        <p>This viewer needs JavaScript to render and download the Markdown resource.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="resource-footer">
+    <p>Java Programming course resource</p>
+  </footer>
+
+  <script type="module" src="src/resource.js"></script>
+</body>
+</html>

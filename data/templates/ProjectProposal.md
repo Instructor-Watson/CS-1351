@@ -16,7 +16,7 @@ TODO
 - Relational and logical operators: TODO
 - Loop: TODO
 - At least two methods besides main: TODO
-- Array or ArrayList: TODO
+- Array: TODO
 
 ## Three example interactions
 1. Input: TODO; expected result: TODO
@@ -26,9 +26,7 @@ TODO
 ## Part 2 improvements
 - String manipulation: TODO
 - Loop-based input validation: TODO
-- Exception handling and an explicitly thrown exception: TODO
-- Regular expression: TODO
-- File loading and saving: TODO
+- Collection use: TODO
 
 ## Expected files
 TODO

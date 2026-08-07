@@ -4,8 +4,12 @@
   "description": "A private, browser-only Java assignment checker for static hosting",
   "type": "module",
   "scripts": {
+    "resources:manifest": "node scripts/generate-markdown-resource-manifest.mjs",
+    "predev": "npm run resources:manifest",
     "dev": "vite",
+    "prebuild": "npm run resources:manifest",
     "build": "vite build",
+    "prebuild:analyze": "npm run resources:manifest",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
     "preview:https": "vite preview --https",
@@ -19,7 +23,9 @@
     "vitest": "^1.0.0"
   },
   "dependencies": {
+    "dompurify": "^3.4.13",
     "java-parser": "^3.0.1",
+    "marked": "^18.0.9",
     "monaco-editor": "^0.45.0"
   },
   "overrides": {

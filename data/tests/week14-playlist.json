@@ -7,31 +7,49 @@
       "type": "compile"
     },
     {
-      "id": "list",
-      "title": "Playlist owns an ArrayList of Strings",
+      "id": "collection",
+      "title": "Playlist owns and initializes an ArrayList of Strings",
       "type": "source",
       "patterns": [
-        "ArrayList\\s*<\\s*String\\s*>",
-        "new\\s+ArrayList"
+        "private\\s+ArrayList\\s*<\\s*String\\s*>\\s+songs",
+        "this\\.songs\\s*=\\s*new\\s+ArrayList"
       ]
     },
     {
-      "id": "regex",
-      "title": "A regular expression validates titles",
+      "id": "wrappers",
+      "title": "Wrapper methods add, remove, inspect, and display songs",
       "type": "source",
       "patterns": [
-        "Pattern\\.compile\\s*\\(",
-        "\\.matcher\\s*\\(",
-        "\\.matches\\s*\\("
+        "void\\s+addSong\\s*\\(",
+        "\\.add\\s*\\(\\s*title\\s*\\)",
+        "String\\s+playNext\\s*\\(",
+        "\\.remove\\s*\\(\\s*0\\s*\\)",
+        "boolean\\s+isEmpty\\s*\\(",
+        "\\.isEmpty\\s*\\(",
+        "for\\s*\\(\\s*String\\s+\\w+\\s*:\\s*(this\\.)?songs\\s*\\)"
       ]
     },
     {
-      "id": "exception",
-      "title": "Invalid titles are thrown and caught",
+      "id": "helpers",
+      "title": "Private helper methods locate and swap songs",
       "type": "source",
       "patterns": [
-        "throw\\s+new\\s+IllegalArgumentException",
-        "catch\\s*\\("
+        "private\\s+void\\s+swapSongs\\s*\\(",
+        "\\.set\\s*\\(",
+        "private\\s+int\\s+indexLowest\\s*\\(",
+        "\\.compareTo\\s*\\(",
+        "return\\s+lowest\\s*;"
+      ]
+    },
+    {
+      "id": "selection-sort",
+      "title": "selectionSort repeatedly finds and swaps the lowest remaining song",
+      "type": "source",
+      "patterns": [
+        "void\\s+selectionSort\\s*\\(",
+        "for\\s*\\(",
+        "indexLowest\\s*\\(\\s*i\\s*\\)",
+        "swapSongs\\s*\\(\\s*i\\s*,\\s*lowest\\s*\\)"
       ]
     },
     {
@@ -40,10 +58,13 @@
       "type": "run",
       "input": "",
       "outputContains": [
-        "Here Comes the Sun",
-        "Happy",
+        "Original playlist:",
         "Imagine",
-        "Validation:"
+        "Happy",
+        "Here Comes the Sun",
+        "Sorted playlist:",
+        "Playing next: Happy",
+        "Playlist empty: false"
       ]
     }
   ]

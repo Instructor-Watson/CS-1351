@@ -7,41 +7,31 @@
       "type": "compile"
     },
     {
-      "id": "strings-validation",
-      "title": "String processing and loop-based validation are used",
+      "id": "strings",
+      "title": "Taught String processing is used meaningfully",
       "type": "source",
       "patterns": [
-        "\\.(trim|replace|substring|toUpperCase|toLowerCase)\\s*\\(",
-        "\\b(while|for)\\s*\\("
+        "(\\.(trim|replace|substring|toUpperCase|toLowerCase|indexOf|contains|charAt|length|compareTo|compareToIgnoreCase|equalsIgnoreCase|startsWith|endsWith)\\s*\\(|new\\s+StringBuilder\\s*\\()"
       ]
     },
     {
-      "id": "exceptions",
-      "title": "Exceptions are caught and explicitly thrown",
+      "id": "validation",
+      "title": "A loop continues until important input is valid",
       "type": "source",
       "patterns": [
-        "try\\s*\\{",
-        "catch\\s*\\(",
-        "throw\\s+new\\s+"
+        "\\b(while|for)\\s*\\(",
+        "\\.(trim|isBlank|isEmpty)\\s*\\(",
+        "System\\.out\\.print"
       ]
     },
     {
-      "id": "regex",
-      "title": "A regular expression is used",
+      "id": "collection",
+      "title": "An array or ArrayList stores project data",
       "type": "source",
       "mode": "any",
       "patterns": [
-        "Pattern\\.compile\\s*\\(",
-        "\\.matches\\s*\\("
-      ]
-    },
-    {
-      "id": "files",
-      "title": "Project data is loaded and saved",
-      "type": "source",
-      "patterns": [
-        "Files\\.(readAllLines|readString)\\s*\\(",
-        "Files\\.(write|writeString)\\s*\\("
+        "\\w+\\s*\\[\\s*\\]",
+        "ArrayList\\s*<"
       ]
     }
   ]
