@@ -12,9 +12,8 @@ For Parts 1 and 2, submit every Java source file needed to run the project, a RE
 
 ## Project support resources
 
-- [Markdown Guide for Your Project Proposal](MARKDOWN_GUIDE.md) explains the Markdown formatting students need for the proposal and README.
-- PROJECT_PLANNING_GUIDE.md explains how to choose an achievable scope, map features to Java concepts, plan a timeline, and identify fallback options.
-- PROJECT_PROPOSAL_EXAMPLE.md models a complete proposal.
-- LOOP_BASED_INPUT_VALIDATION_GUIDE.md connects the Chapter 5 validation pattern to Chapter 6 `while` loops with completed examples.
-- PROJECT_README_CHECKLIST.md gives the required README structure and a concise example.
-- PROJECT_PRESENTATION_GUIDE.md gives the required 5-10 minute sequence and delivery checklist.
+- [Personal Project Planning Guide](PROJECT_PLANNING_GUIDE.md) explains how to choose an achievable scope, map features to Java concepts, plan a timeline, and identify fallback options.
+- [Proposal Example](PROJECT_PROPOSAL_EXAMPLE.md) models a complete proposal.
+- [Loop-Based Input Validation Guide](LOOP_BASED_INPUT_VALIDATION_GUIDE.md) connects the Chapter 5 validation pattern to Chapter 6 `while` loops with completed examples.
+- [Personal Project README Checklist](PROJECT_README_CHECKLIST.md) gives the required README structure and a concise example.
+- [Personal Project Presentation Guide](PROJECT_PRESENTATION_GUIDE.md) gives the required 5-10 minute sequence and delivery checklist.
