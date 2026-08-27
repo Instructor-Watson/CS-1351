@@ -134,7 +134,7 @@ function evaluateCheck(check, originalSource, sourceWithoutComments, syntaxError
   return { passed: false, message: `Unsupported browser check type: ${check.type}` };
 }
 
-function testPattern(pattern, source, ignoreCase = false) {
+function testPattern(pattern, source, ignoreCase = true) {
   try {
     return new RegExp(pattern, `${ignoreCase ? 'i' : ''}m`).test(source);
   } catch {
@@ -142,7 +142,7 @@ function testPattern(pattern, source, ignoreCase = false) {
   }
 }
 
-function countPattern(pattern, source, ignoreCase = false) {
+function countPattern(pattern, source, ignoreCase = true) {
   try {
     return [...source.matchAll(new RegExp(pattern, `${ignoreCase ? 'i' : ''}gm`))].length;
   } catch {

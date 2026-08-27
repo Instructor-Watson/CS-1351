@@ -18,4 +18,18 @@ describe('reference Java solutions', () => {
       expect(failures, failures.join('\n')).toEqual([]);
     });
   }
+
+  it('accepts MyProfile output labels regardless of capitalization', async () => {
+    const source = readFileSync(resolve('solutions', 'MyProfile.java'), 'utf8')
+      .replace('Name:', 'name:')
+      .replace('Favorite number:', 'FAVORITE NUMBER:')
+      .replace('Doubled number:', 'dOuBlEd NuMbEr:')
+      .replace('Favorite price:', 'favorite price:');
+    const specification = readFileSync(resolve('data', 'tests', 'week02-my-profile.json'), 'utf8');
+
+    const result = await new AutograderEngine().gradeSubmission(source, specification);
+    const labelsCheck = result.testCases.find((test) => test.name === 'labels');
+
+    expect(labelsCheck?.passed).toBe(true);
+  });
 });

@@ -49,4 +49,40 @@ describe('browser-only Java autograder', () => {
     expect(result.testCases[0].passed).toBe(true);
     expect(result.testCases[0].displayName).toContain('IntelliJ verification required');
   });
+
+  it('matches all source checks without regard to capitalization by default', async () => {
+    const engine = new AutograderEngine();
+    const specification = JSON.stringify({
+      tests: [
+        { id: 'source', title: 'Class name', type: 'source', patterns: ['class\\s+demo'] },
+        { id: 'count', title: 'Value count', type: 'source_count', pattern: '\\bVALUE\\b', minimum: 2 }
+      ],
+      requireNoTodo: false
+    });
+    const source = 'class Demo { int value = 1; int doubled = value * 2; }';
+
+    const result = await engine.gradeSubmission(source, specification);
+
+    expect(result.failedTests).toBe(0);
+  });
+
+  it('allows an individual source check to require exact capitalization', async () => {
+    const engine = new AutograderEngine();
+    const specification = JSON.stringify({
+      tests: [
+        {
+          id: 'strict',
+          title: 'Strict class name',
+          type: 'source',
+          patterns: ['class\\s+demo'],
+          ignoreCase: false
+        }
+      ],
+      requireNoTodo: false
+    });
+
+    const result = await engine.gradeSubmission('class Demo {}', specification);
+
+    expect(result.testCases[0].passed).toBe(false);
+  });
 });
