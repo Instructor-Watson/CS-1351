@@ -21,11 +21,11 @@
       "title": "All five vowels are considered",
       "type": "source",
       "patterns": [
-        "'a'",
-        "'e'",
-        "'i'",
-        "'o'",
-        "'u'"
+        "(?:'a'|\"[aeiou]*a[aeiou]*\")",
+        "(?:'e'|\"[aeiou]*e[aeiou]*\")",
+        "(?:'i'|\"[aeiou]*i[aeiou]*\")",
+        "(?:'o'|\"[aeiou]*o[aeiou]*\")",
+        "(?:'u'|\"[aeiou]*u[aeiou]*\")"
       ]
     },
     {
